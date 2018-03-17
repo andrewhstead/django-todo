@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todo.apps.TodoConfig',
     'rest_framework',
+    'rest_framework_docs',
     'accounts',
     'corsheaders',
 ]
