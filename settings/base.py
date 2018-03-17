@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'pk==iz5+g0r4vlws-2+)6f@+ns86*#4w3wu0xuc7+)tc&lr@sg'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "django-todo-code-institute.herokuapp.com"]
 
 
 # Application definition
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
 ]
+
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
