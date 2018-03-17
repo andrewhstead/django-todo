@@ -111,10 +111,8 @@ class TodoView(APIView):
     def delete(self, request, pk):
         """
         Handle DELETE request for the `/todo/` endpoint.
-
         Retrieves a `todo` instance based on the primary key contained
         in the URL and then deletes the relevant instance.
-
         Returns a 204 (no content) status to indicate that the item was deleted.
         """
         todo = Todo.objects.get(id=pk)
